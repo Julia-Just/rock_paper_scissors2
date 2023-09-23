@@ -3,13 +3,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        final String [] choices = {"Камень", "Ножницы", "Бумага"};
+        //final String [] choices = {"Камень", "Ножницы", "Бумага"};
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        int compChoice = random.nextInt(choices.length);  // генерирует индекс от 0 до самого последнего
+        int compChoice = random.nextInt(3);  // генерирует индекс от 0 до самого последнего
 
         System.out.println("Начало игры");
-        System.out.println("0. Камень\n" + "1. Ножницы\n" + "2. Бумага\n");
+        System.out.println("""
+                0. Камень
+                1. Ножницы
+                2. Бумага
+                """);
         int playerChoice = scanner.nextInt();
         System.out.println(compChoice);
 
